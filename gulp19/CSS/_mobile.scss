@@ -1,0 +1,175 @@
+body {
+    color: $primary-color;
+    @include nospace;
+    font-family: 'Nuito', sans-serif;
+    line-height: 2;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'inter', sans-serif;
+}
+
+footer {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+    font-size: 2 rem;
+    margin-bottom: 0;
+}
+
+/* make images flexible */
+img {
+    max-width: 100%;
+}
+
+a {
+    color: $button-color;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+header {
+    border-bottom: 10px $accent-color;
+    color: $primary-color;
+}
+
+/* navbar styling */
+nav ul {
+    @include nospace;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    li {
+        margin: 0 1rem 1rem 1rem;
+        @include boxmodel(0 1rem 1rem 1rem, 0);
+        font-size: 1.3rem;
+    }
+
+    /* max width on the image in pixels */
+    .logo {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    img {
+        max-width: 150px;
+    }
+
+    /* flex basis on the image container, li */
+    nav a {
+        color: $alt-text-color;
+        text-decoration: none;
+        display: block;
+    }
+
+    nav a:hover {
+        color: $accent-color;
+    }
+}
+
+
+/* establishes a white background */
+.main-bkgd {
+    background: #ffffff url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
+    padding-bottom: 300px;
+}
+
+/* sits inside of the white background, centered */
+.main {
+    max-width: 1200px;
+    @include boxmodel(0 auto, 2rem);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+article {
+    flex-basis: 73%;
+}
+
+figure {
+    @include boxmodel(3rem 0 0 0, 0);
+    flex-basis: 25%;
+    background-color: $button-color;
+    border-radius: 10px;
+
+    img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    caption {
+        color: $alt-text-color;
+        padding: 0.5 rem;
+    }
+}
+
+.button {
+    display: inline-block;
+    background-color: $button-color;
+    border-radius: 10px;
+    @include boxmodel(0, 0.5rem 1rem);
+    color: $alt-text-color;
+    text-decoration: none;
+    border: 3px solid $button-color;
+
+
+    :hover {
+        background-color: $alt-text-color;
+        color: $button-color;
+    }
+}
+
+footer {
+    color: $alt-text-color;
+    text-align: center;
+    border-top: 10px solid $accent-color;
+
+    ul {
+        list-style-type: none;
+        @include nospace;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    a {
+        color: $alt-text-color;
+        font-size: 2rem;
+        display: block;
+        @include boxmodel(0 1rem 3rem 1rem, 0);
+    }
+}
+
+.footer-card {
+    @include boxmodel(0rem, 5rem);
+}
+
+.content {
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.card {
+    @include boxmodel(1rem 5rem 1rem 5rem, 2rem);
+    border: 10px solid $accent-color;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+
+html {
+    box-sizing: border-box;
+
+}
